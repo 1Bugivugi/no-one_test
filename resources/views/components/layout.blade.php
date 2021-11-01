@@ -30,10 +30,11 @@
             <div class="">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center d-flex flex-row">
                     <li class="nav-item px-3">
-                        <a class="nav-link active" aria-current="page" href="/">На главную</a>
+                        <a class="nav-link {{Request::is('/') ? 'active' : ''}}" aria-current="page" href="/">На главную</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="/articles">Каталог статей</a>
+                        <a class="nav-link {{(strpos(Request::url(), '/articles') > -1) ? 'active' : ''}}"
+                           href="/articles">Каталог статей</a>
                     </li>
                 </ul>
             </div>
