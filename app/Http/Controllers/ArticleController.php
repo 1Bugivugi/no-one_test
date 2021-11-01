@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -14,10 +15,11 @@ class ArticleController extends Controller
         ]);
     }
 
-    public function main()
+    public function articles()
     {
         return view('articles', [
             'articles' => Article::latest()->paginate(6),
+            'tags' => Tag::all()
         ]);
     }
 
@@ -26,5 +28,16 @@ class ArticleController extends Controller
         return view('find', [
             'article' => $article
         ]);
+    }
+
+    public function likes(Article $article)
+    {
+        $element = Article::find($article->id);
+
+        $element->likes += 1;
+
+        $element->save();
+
+        return $element->likes;
     }
 }
