@@ -14,24 +14,6 @@ main .inner-wrapper {
   main .inner-wrapper .sidebar-class {
     width: 100%;
     max-width: 20%; }
-    main .inner-wrapper .sidebar-class .wrapper {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap; }
-      main .inner-wrapper .sidebar-class .wrapper .single-tag {
-        cursor: pointer;
-        text-decoration: none;
-        display: block;
-        border: 1px solid #676f7a;
-        background-color: #676f7a;
-        border-radius: 25px;
-        color: white;
-        font-weight: 500;
-        padding: 3px 15px;
-        font-size: 14px;
-        margin-right: 10px;
-        height: max-content;
-        margin-bottom: 10px; }
   main .inner-wrapper .grid-wrapper {
     display: flex;
     flex-direction: row;
@@ -39,31 +21,51 @@ main .inner-wrapper {
     width: 100%;
     max-width: 80%; }
 
-.card-body .stats {
+.tags-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .tags-wrapper .single-tag {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    border: 1px solid #676f7a;
+    background-color: #676f7a;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    padding: 3px 15px;
+    font-size: 14px;
+    margin-right: 10px;
+    height: max-content;
+    margin-bottom: 10px; }
+
+.stats {
   padding-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
-  .card-body .stats .views, .card-body .stats .likesForm {
+  .stats .views, .stats .likesForm {
     display: flex;
     flex-direction: row;
     align-content: center; }
-    .card-body .stats .views button, .card-body .stats .views input[type="submit"], .card-body .stats .views input[type="reset"], .card-body .stats .likesForm button, .card-body .stats .likesForm input[type="submit"], .card-body .stats .likesForm input[type="reset"] {
-      background: none;
-      color: inherit;
-      border: none;
-      padding: 0;
-      font: inherit;
-      cursor: pointer;
-      outline: inherit; }
-    .card-body .stats .views i, .card-body .stats .likesForm i {
+    .stats .views i, .stats .likesForm i {
       display: flex;
       align-items: center; }
-    .card-body .stats .views span, .card-body .stats .views label, .card-body .stats .likesForm span, .card-body .stats .likesForm label {
+    .stats .views span, .stats .views label, .stats .likesForm span, .stats .likesForm label {
       margin-left: 10px; }
-  .card-body .stats .likes {
+  .stats .likes {
     cursor: pointer; }
 
 .detail-page__body {
   display: flex;
   flex-direction: row; }
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit; }

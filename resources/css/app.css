@@ -3,3 +3,69 @@
 
 .nav-item .active {
   border-bottom: 2px solid blue; }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1520px !important; } }
+
+main .inner-wrapper {
+  display: flex;
+  flex-direction: row; }
+  main .inner-wrapper .sidebar-class {
+    width: 100%;
+    max-width: 20%; }
+  main .inner-wrapper .grid-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 80%; }
+
+.tags-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .tags-wrapper .single-tag {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    border: 1px solid #676f7a;
+    background-color: #676f7a;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    padding: 3px 15px;
+    font-size: 14px;
+    margin-right: 10px;
+    height: max-content;
+    margin-bottom: 10px; }
+
+.stats {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .stats .views, .stats .likesForm {
+    display: flex;
+    flex-direction: row;
+    align-content: center; }
+    .stats .views i, .stats .likesForm i {
+      display: flex;
+      align-items: center; }
+    .stats .views span, .stats .views label, .stats .likesForm span, .stats .likesForm label {
+      margin-left: 10px; }
+  .stats .likes {
+    cursor: pointer; }
+
+.detail-page__body {
+  display: flex;
+  flex-direction: row; }
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit; }

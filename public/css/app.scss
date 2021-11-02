@@ -22,29 +22,6 @@ main {
         .sidebar-class {
             width: 100%;
             max-width: 20%;
-
-            .wrapper {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-
-                .single-tag {
-                    cursor: pointer;
-                    text-decoration: none;
-                    display: block;
-                    border: 1px solid #676f7a;
-                    background-color: #676f7a;
-                    border-radius: 25px;
-                    color: white;
-                    font-weight: 500;
-                    padding: 3px 15px;
-                    font-size: 14px;
-                    margin-right: 10px;
-                    height: max-content;
-                    margin-bottom: 10px;
-                }
-            }
-
         }
 
         .grid-wrapper {
@@ -57,45 +34,65 @@ main {
     }
 }
 
-.card-body {
-    .stats {
-        padding-top: 20px;
+.tags-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .single-tag {
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        border: 1px solid #676f7a;
+        background-color: #676f7a;
+        border-radius: 25px;
+        color: white;
+        font-weight: 500;
+        padding: 3px 15px;
+        font-size: 14px;
+        margin-right: 10px;
+        height: max-content;
+        margin-bottom: 10px;
+    }
+}
+
+.stats {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .views, .likesForm {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        align-content: center;
 
-        .views, .likesForm {
+        i {
             display: flex;
-            flex-direction: row;
-            align-content: center;
-
-            button, input[type="submit"], input[type="reset"] {
-                background: none;
-                color: inherit;
-                border: none;
-                padding: 0;
-                font: inherit;
-                cursor: pointer;
-                outline: inherit;
-            }
-
-            i {
-                display: flex;
-                align-items: center;
-            }
-
-            span, label {
-                margin-left: 10px;
-            }
+            align-items: center;
         }
 
-        .likes {
-            cursor: pointer;
+        span, label {
+            margin-left: 10px;
         }
+    }
+
+    .likes {
+        cursor: pointer;
     }
 }
 
 .detail-page__body {
     display: flex;
     flex-direction: row;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }

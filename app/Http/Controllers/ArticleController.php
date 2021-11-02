@@ -40,4 +40,15 @@ class ArticleController extends Controller
 
         return $element->likes;
     }
+
+    public function views(Article $article)
+    {
+        $element = Article::find($article->id);
+
+        $element->views += 1;
+
+        $element->save();
+
+        return $element->views;
+    }
 }
